@@ -1,5 +1,7 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:image_picker/image_picker.dart';
 
 class Registration extends StatefulWidget {
   @override
@@ -7,7 +9,32 @@ class Registration extends StatefulWidget {
 }
 
 class _RegistrationState extends State<Registration> {
+
+  String email,name,handicap,starting_position,password,repeat_password;
+
   TextEditingController emailEditingContrller = TextEditingController();
+
+  File _image;
+
+
+  @override
+  void initState() {
+    email = "";
+    name = "";
+    handicap = "";
+    starting_position = "";
+    password = "";
+    repeat_password = "";
+  }
+
+  Future getImage() async {
+    var image = await ImagePicker.pickImage(source: ImageSource.gallery);
+    setState(() {
+      _image = image;
+    });
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +66,7 @@ class _RegistrationState extends State<Registration> {
                               border: InputBorder.none,
                               contentPadding: EdgeInsets.all(15),
                               filled: true,
-                              fillColor: Colors.white30,
+                              fillColor: Color(0xFFF3F7F6),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.all(Radius.circular(15.0)),
                                 borderSide: BorderSide(color: Colors.black),
@@ -51,6 +78,11 @@ class _RegistrationState extends State<Registration> {
                               hintText: 'Email (used for login)',
                               prefixIcon: Icon(Icons.person),
                             ),
+                            onChanged: (input){
+                              setState((){
+                                email = input;
+                              });
+                            },
                           ),
                         ),
                         Container(
@@ -60,7 +92,7 @@ class _RegistrationState extends State<Registration> {
                               border: InputBorder.none,
                               contentPadding: EdgeInsets.all(15),
                               filled: true,
-                              fillColor: Colors.white30,
+                              fillColor: Color(0xFFF3F7F6),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.all(Radius.circular(15.0)),
                                 borderSide: BorderSide(color: Colors.black),
@@ -72,6 +104,11 @@ class _RegistrationState extends State<Registration> {
                               hintText: 'Name',
                               prefixIcon: Icon(Icons.person_pin),
                             ),
+                            onChanged: (input){
+                              setState((){
+                                name = input;
+                              });
+                            },
                           ),
                         ),
                         Container(
@@ -82,7 +119,10 @@ class _RegistrationState extends State<Registration> {
                                 children: <Widget>[
                                   Container(
                                     margin: EdgeInsets.all(10),
-                                    child: Image.asset('assets/images/profile_photo.png',width:100,height:100),
+                                    child: GestureDetector(
+                                      child: Image.asset('assets/images/profile_photo.png',width:100,height:100),
+                                      onTap: getImage,
+                                    )
                                   )
                                 ],
                               ),
@@ -96,7 +136,7 @@ class _RegistrationState extends State<Registration> {
                                             border: InputBorder.none,
                                             contentPadding: EdgeInsets.all(15),
                                             filled: true,
-                                            fillColor: Colors.white30,
+                                            fillColor: Color(0xFFF3F7F6),
                                             focusedBorder: OutlineInputBorder(
                                               borderRadius: BorderRadius.all(Radius.circular(15.0)),
                                               borderSide: BorderSide(color: Colors.black),
@@ -108,6 +148,11 @@ class _RegistrationState extends State<Registration> {
                                             hintText: 'Handicap',
                                             prefixIcon: Icon(Icons.flag),
                                           ),
+                                          onChanged: (input){
+                                            setState((){
+                                              handicap = input;
+                                            });
+                                          },
                                         ),
                                       ),
                                       Container(
@@ -117,7 +162,7 @@ class _RegistrationState extends State<Registration> {
                                             border: InputBorder.none,
                                             contentPadding: EdgeInsets.all(15),
                                             filled: true,
-                                            fillColor: Colors.white30,
+                                            fillColor: Color(0xFFF3F7F6),
                                             focusedBorder: OutlineInputBorder(
                                               borderRadius: BorderRadius.all(Radius.circular(15.0)),
                                               borderSide: BorderSide(color: Colors.black),
@@ -129,6 +174,11 @@ class _RegistrationState extends State<Registration> {
                                             hintText: 'Starting position',
                                             prefixIcon: Icon(Icons.adjust),
                                           ),
+                                          onChanged: (input){
+                                            setState((){
+                                              starting_position = input;
+                                            });
+                                          },
                                         ),
                                       ),
                                     ],
@@ -140,11 +190,12 @@ class _RegistrationState extends State<Registration> {
                         Container(
                           margin: EdgeInsets.only(bottom: 10),
                           child: TextField(
+                            obscureText: true,
                             decoration: InputDecoration(
                               border: InputBorder.none,
                               contentPadding: EdgeInsets.all(15),
                               filled: true,
-                              fillColor: Colors.white30,
+                              fillColor: Color(0xFFF3F7F6),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.all(Radius.circular(15.0)),
                                 borderSide: BorderSide(color: Colors.black),
@@ -156,16 +207,22 @@ class _RegistrationState extends State<Registration> {
                               hintText: 'Password',
                               prefixIcon: Icon(Icons.lock_outline),
                             ),
+                            onChanged: (input){
+                              setState((){
+                                password = input;
+                              });
+                            },
                           ),
                         ),
                         Container(
                           margin: EdgeInsets.only(bottom: 10),
                           child: TextField(
+                            obscureText: true,
                             decoration: InputDecoration(
                               border: InputBorder.none,
                               contentPadding: EdgeInsets.all(15),
                               filled: true,
-                              fillColor: Colors.white30,
+                              fillColor: Color(0xFFF3F7F6),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.all(Radius.circular(15.0)),
                                 borderSide: BorderSide(color: Colors.black),
@@ -177,6 +234,11 @@ class _RegistrationState extends State<Registration> {
                               hintText: 'Repeat Password',
                               prefixIcon: Icon(Icons.lock),
                             ),
+                            onChanged: (input){
+                              setState((){
+                                repeat_password = input;
+                              });
+                            },
                           ),
                         ),
                         Container(
@@ -208,4 +270,3 @@ class _RegistrationState extends State<Registration> {
     );
   }
 }
-
