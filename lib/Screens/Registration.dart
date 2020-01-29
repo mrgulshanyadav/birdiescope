@@ -120,7 +120,17 @@ class _RegistrationState extends State<Registration> {
                                   Container(
                                     margin: EdgeInsets.all(10),
                                     child: GestureDetector(
-                                      child: Image.asset('assets/images/profile_photo.png',width:100,height:100),
+                                      child: Container(
+                                        height: 100,
+                                        width: 100,
+                                        decoration: BoxDecoration(
+                                          color: Colors.black,
+                                          image: DecorationImage(
+                                            image: _image == null ? AssetImage("assets/images/profile_photo.png") :  FileImage(_image),
+                                            fit: BoxFit.cover
+                                          ),
+                                        ),
+                                      ),
                                       onTap: getImage,
                                     )
                                   )
