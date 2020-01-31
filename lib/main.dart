@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './Screens/Registration.dart';
 import './Screens/Settings.dart';
 import './Screens/MyProfile.dart';
+import 'Screens/Scoreboard/Scoreboard.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: MyProfile(),
+      home: Scoreboard(),
     );
   }
 }

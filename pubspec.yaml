@@ -26,6 +26,8 @@ dependencies:
   image_picker: ^0.6.0
   sleek_circular_slider: ^1.0.7
   fcharts: ^0.0.11
+  dotted_border: ^1.0.4
+  numberpicker: ^1.1.0
 
 dev_dependencies:
   flutter_test:
