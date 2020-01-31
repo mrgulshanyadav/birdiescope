@@ -28,6 +28,7 @@ dependencies:
   fcharts: ^0.0.11
   dotted_border: ^1.0.4
   numberpicker: ^1.1.0
+  slider_button: ^0.0.32
 
 dev_dependencies:
   flutter_test:
