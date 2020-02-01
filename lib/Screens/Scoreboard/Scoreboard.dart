@@ -1,3 +1,4 @@
+import 'package:birdiescope/Screens/PlayerComponents/AddAPlayer.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:numberpicker/numberpicker.dart';
@@ -136,7 +137,14 @@ class _ScoreboardState extends State<Scoreboard> {
                                             fontSize: 16,
                                             fontWeight: FontWeight.normal),
                                       ),
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        showModalBottomSheet(
+                                            context: context,
+                                            builder: (context){
+                                              return AddAPlayer();
+                                            }
+                                        );
+                                      },
                                     ),
                                   ],
                                 ),
