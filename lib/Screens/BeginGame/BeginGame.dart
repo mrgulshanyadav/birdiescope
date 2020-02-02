@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:numberpicker/numberpicker.dart';
 import 'package:slider_button/slider_button.dart';
 
-class Scoreboard extends StatefulWidget {
+class BeginGame extends StatefulWidget {
   @override
-  _ScoreboardState createState() => _ScoreboardState();
+  _BeginGameState createState() => _BeginGameState();
 }
 
-class _ScoreboardState extends State<Scoreboard> {
+class _BeginGameState extends State<BeginGame> {
   int selected_number_of_holes = 18;
   int selected_starting_hole = 1;
 
@@ -26,32 +26,7 @@ class _ScoreboardState extends State<Scoreboard> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Container(
-                        padding: EdgeInsets.all(20),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Container(
-                              child: Text(
-                                "Scorecard",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 36,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Container(
-                              child: Text(
-                                "Keep track of your handicap by using the app as a simple scorecard",
-                                style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.normal),
-                              ),
-                            ),
-                          ],
-                        )),
-                    Container(
+                     Container(
                       padding: EdgeInsets.only(left: 20,right: 10,top: 10,bottom: 10),
                       child: ListView.builder(
                         shrinkWrap: true,
@@ -228,6 +203,7 @@ class _ScoreboardState extends State<Scoreboard> {
                     )
                   ],
                 )))
-            );
+    );
+
   }
 }

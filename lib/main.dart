@@ -1,3 +1,5 @@
+import 'package:birdiescope/Screens/BeginGame/BeginGame.dart';
+import 'package:birdiescope/Screens/Scoreboard/ScoreboardRule.dart';
 import 'package:flutter/material.dart';
 import './Screens/Registration.dart';
 import './Screens/Settings.dart';
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: Scoreboard(),
+      home: ScoreboardRule(),
     );
   }
 }
