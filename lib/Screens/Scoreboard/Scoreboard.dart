@@ -208,7 +208,7 @@ class _ScoreboardState extends State<Scoreboard> {
                       decoration: BoxDecoration(color: Colors.green,
                         gradient: LinearGradient(colors: [Color(0xff05c39b),Colors.green]),
                       ),
-                      padding: EdgeInsets.all(20),
+                      padding: EdgeInsets.all(16),
                       alignment: Alignment.bottomCenter,
                       child: SliderButton(
                         action: () {
