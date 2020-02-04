@@ -2,14 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:slider_button/slider_button.dart';
 
-import 'ScoreboardEdit.dart';
+import 'ScoreboardRule.dart';
 
-class ScoreboardRule extends StatefulWidget {
+class ScoreboardEdit extends StatefulWidget {
   @override
-  _ScoreboardRuleState createState() => _ScoreboardRuleState();
+  _ScoreboardEditState createState() => _ScoreboardEditState();
 }
 
-class _ScoreboardRuleState extends State<ScoreboardRule> {
+class _ScoreboardEditState extends State<ScoreboardEdit> {
 
   List<String> usersList;
   List<dynamic> counter;
@@ -59,12 +59,12 @@ class _ScoreboardRuleState extends State<ScoreboardRule> {
                             child: GestureDetector(
                               child: CircleAvatar(
                                 radius: 20,
-                                child: Icon(Icons.edit,color: Colors.white,),
-                                backgroundColor: Colors.grey,
+                                child: Icon(Icons.close,color: Colors.white,),
+                                backgroundColor: Colors.red,
                               ),
                               onTap: (){
                                 Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                                  return ScoreboardEdit();
+                                  return ScoreboardRule();
                                 }));
                               },
                             )
@@ -108,7 +108,14 @@ class _ScoreboardRuleState extends State<ScoreboardRule> {
                                             ),
                                           ),
                                           child: Center(
-                                              child: Text((index+1).toString(), style: TextStyle(color: Colors.black,fontSize: 18, fontWeight: FontWeight.bold),)
+                                              child: GestureDetector(
+                                                child: Text((index+1).toString(), style: TextStyle(color: Colors.black,fontSize: 18, fontWeight: FontWeight.bold),),
+                                                onTap: (){
+                                                  setState(() {
+                                                    selected_hole = (index+1).toString();
+                                                  });
+                                                },
+                                              )
                                           ),
                                         );
                                       },
