@@ -77,13 +77,21 @@ class _MyStatsState extends State<MyStats> {
                     aspectRatio: 8 / 3,
                     child: new LineChart(
                       lines: [
+
                         new Line<List<String>, String, String>(
                           data: byTimeChartData,
+
+
+
                           xFn: (datum) => datum[0],
                           yFn: (datum) => datum[1],
+
+                          stroke: new PaintOptions.stroke(color:Colors.greenAccent,strokeWidth: 2.0)
                         ),
                       ],
+
                       chartPadding: new EdgeInsets.fromLTRB(30.0, 10.0, 10.0, 30.0),
+
                     ),
                   )
               ),
@@ -105,6 +113,8 @@ class _MyStatsState extends State<MyStats> {
                         data: byRoundsChartData,
                         xFn: (datum) => datum[0],
                         yFn: (datum) => datum[1],
+
+                          stroke: new PaintOptions.stroke(color:Colors.greenAccent,strokeWidth: 2.0)
                       ),
                     ],
                     chartPadding: new EdgeInsets.fromLTRB(30.0, 10.0, 10.0, 30.0),
@@ -123,15 +133,21 @@ class _MyStatsState extends State<MyStats> {
                 children: <Widget>[
                   SleekCircularSlider(
                     appearance: CircularSliderAppearance(
+                        customColors: CustomSliderColors(trackColor: Colors.black,progressBarColors: [Colors.green,Colors.yellow,Colors.red]),
                         customWidths: CustomSliderWidths(progressBarWidth: 10),
                         size: 100
+
                     ),
                     min: 0,
                     max: 100,
                     initialValue: 39,
+
+
+
                   ),
                   SleekCircularSlider(
                     appearance: CircularSliderAppearance(
+                        customColors: CustomSliderColors(trackColor: Colors.black,progressBarColors: [Colors.green,Colors.yellow,Colors.red]),
                         customWidths: CustomSliderWidths(progressBarWidth: 10),
                         size: 100
                     ),
@@ -141,6 +157,7 @@ class _MyStatsState extends State<MyStats> {
                   ),
                   SleekCircularSlider(
                     appearance: CircularSliderAppearance(
+                        customColors: CustomSliderColors(trackColor: Colors.black,progressBarColors: [Colors.green,Colors.yellow,Colors.red]),
                         customWidths: CustomSliderWidths(progressBarWidth: 10),
                         size: 100
                     ),

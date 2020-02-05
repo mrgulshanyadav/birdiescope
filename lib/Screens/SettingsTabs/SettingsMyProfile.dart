@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class MyProfile extends StatefulWidget {
+class SettingsMyProfile extends StatefulWidget {
   @override
-  _MyProfileState createState() => _MyProfileState();
+  _SettingsMyProfileState createState() => _SettingsMyProfileState();
 }
 
-class _MyProfileState extends State<MyProfile> {
+class _SettingsMyProfileState extends State<SettingsMyProfile> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -13,7 +13,7 @@ class _MyProfileState extends State<MyProfile> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Container(
-            margin: EdgeInsets.only(bottom: 10),
+            margin: EdgeInsets.only(bottom: 10, top:10),
             child: TextField(
               decoration: InputDecoration(
                 border: InputBorder.none,

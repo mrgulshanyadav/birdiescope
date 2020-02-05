@@ -67,19 +67,19 @@ class _NewPlayerState extends State<NewPlayer> {
                       }
                       else {
                         return Container(
-                          margin: EdgeInsets.only(top: 10,right: 10),
-                          height: 60,
-                          width: 50,
-                          child: GestureDetector(
-                            child: CircleAvatar(
-                                backgroundColor: Color(int.parse(colorsList[index]))
-                            ),
-                            onTap: (){
-                              setState(() {
-                                selectedColor = colorsList[index];
-                              });
-                            },
-                          )
+                            margin: EdgeInsets.only(top: 10,right: 10),
+                            height: 60,
+                            width: 50,
+                            child: GestureDetector(
+                              child: CircleAvatar(
+                                  backgroundColor: Color(int.parse(colorsList[index]))
+                              ),
+                              onTap: (){
+                                setState(() {
+                                  selectedColor = colorsList[index];
+                                });
+                              },
+                            )
                         );
                       }
                     },

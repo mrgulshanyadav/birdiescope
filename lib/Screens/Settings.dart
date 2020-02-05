@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:birdiescope/Screens/SettingsTabs/SettingsMyProfile.dart';
-import 'package:birdiescope/Screens/SettingsTabs/SettingsMyTeam.dart';
-import 'package:birdiescope/Screens/SettingsTabs/SettingsPaymentInfo.dart';
+import 'package:birdies_scop/Screens/SettingsTabs/SettingsMyProfile.dart';
+import 'package:birdies_scop/Screens/SettingsTabs/SettingsMyTeam.dart';
+import 'package:birdies_scop/Screens/SettingsTabs/SettingsPaymentInfo.dart';
 
 class Settings extends StatefulWidget {
   @override
@@ -16,7 +16,7 @@ class _SettingsState extends State<Settings> {
   @override
   void initState() {
     setState((){
-      _currentTabPage = MyProfile();
+      _currentTabPage = SettingsMyProfile();
     });
   }
 
@@ -27,7 +27,7 @@ class _SettingsState extends State<Settings> {
       appBar: null,
       body: SafeArea(
         child: Container(
-          margin: EdgeInsets.all(20),
+          margin: EdgeInsets.only(top: 20, left: 20, right: 20),
           child: new Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -38,7 +38,7 @@ class _SettingsState extends State<Settings> {
                     Flexible(
                       flex: 1,
                       child: Container(
-                        margin: EdgeInsets.only(left: 0, top: 50),
+                        margin: EdgeInsets.only(left: 0, top: 20),
                         child: CircleButton(
                             iconData: Icons.arrow_back, onTap: () {}),
                         decoration: new BoxDecoration(
@@ -51,7 +51,7 @@ class _SettingsState extends State<Settings> {
                         flex: 2,
                         child: Center(
                           child: Container(
-                            margin: EdgeInsets.all(50),
+                            margin: EdgeInsets.only(top: 20, right: 0),
                             height: 100,
                             width: 100,
                             child: CircleAvatar(
@@ -65,6 +65,7 @@ class _SettingsState extends State<Settings> {
               ),
               Container(
                 alignment: FractionalOffset(0.0, 0.0),
+                margin: EdgeInsets.only(top: 20),
                 child: Text(
                   "Settings",
                   style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
@@ -88,13 +89,13 @@ class _SettingsState extends State<Settings> {
                       onTap: (pos){
                         setState((){
                           if(pos==0){
-                            _currentTabPage = MyProfile();
+                            _currentTabPage = SettingsMyProfile();
                           }
                           else if(pos==1){
-                            _currentTabPage = MyTeam();
+                            _currentTabPage = SettingsMyTeam();
                           }
                           else if(pos==2){
-                            _currentTabPage = PaymentInfo();
+                            _currentTabPage = SettingsPaymentInfo();
                           }
 
                         });
@@ -102,8 +103,7 @@ class _SettingsState extends State<Settings> {
                     )
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(top: 20),
+              Expanded(
                 child: _currentTabPage,
               ),
             ],

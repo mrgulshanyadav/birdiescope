@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class PaymentInfo extends StatefulWidget {
+class SettingsPaymentInfo extends StatefulWidget {
   @override
-  _PaymentInfoState createState() => _PaymentInfoState();
+  _SettingsPaymentInfoState createState() => _SettingsPaymentInfoState();
 }
 
-class _PaymentInfoState extends State<PaymentInfo> {
+class _SettingsPaymentInfoState extends State<SettingsPaymentInfo> {
   @override
   Widget build(BuildContext context) {
     return Container(

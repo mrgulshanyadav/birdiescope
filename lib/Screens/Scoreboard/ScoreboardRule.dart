@@ -1,8 +1,7 @@
+import 'package:birdies_scop/Screens/Scoreboard/ScoreboardEdit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:slider_button/slider_button.dart';
-
-import 'ScoreboardEdit.dart';
 
 class ScoreboardRule extends StatefulWidget {
   @override
@@ -376,7 +375,7 @@ class _ScoreboardRuleState extends State<ScoreboardRule> {
                               Container(
                                 width: 50,
                                 height: 50,
-                                margin: EdgeInsets.only(right: 75),
+                                 margin: EdgeInsets.only(right: 75),
                                 decoration: new BoxDecoration(
                                     borderRadius: new BorderRadius.circular(25.0),
                                     color: Colors.grey,

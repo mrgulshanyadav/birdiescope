@@ -1,4 +1,4 @@
-import 'package:birdiescope/Screens/PlayerComponents/AddAPlayer.dart';
+import 'package:birdies_scop/Screens/PlayerComponents/AddAPlayer.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:numberpicker/numberpicker.dart';
@@ -208,7 +208,7 @@ class _ScoreboardState extends State<Scoreboard> {
                       decoration: BoxDecoration(color: Colors.green,
                         gradient: LinearGradient(colors: [Color(0xff05c39b),Colors.green]),
                       ),
-                      padding: EdgeInsets.all(16),
+                      padding: EdgeInsets.all(20),
                       alignment: Alignment.bottomCenter,
                       child: SliderButton(
                         action: () {
@@ -228,6 +228,6 @@ class _ScoreboardState extends State<Scoreboard> {
                     )
                   ],
                 )))
-            );
+    );
   }
 }

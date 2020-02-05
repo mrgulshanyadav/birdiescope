@@ -1,8 +1,7 @@
+import 'package:birdies_scop/Screens/Scoreboard/ScoreboardRule.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:slider_button/slider_button.dart';
-
-import 'ScoreboardRule.dart';
 
 class ScoreboardEdit extends StatefulWidget {
   @override

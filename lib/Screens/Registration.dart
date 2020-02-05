@@ -1,7 +1,10 @@
 import 'dart:io';
+import 'package:birdies_scop/Screens/UserProfile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:image_picker/image_picker.dart';
+
+import '../main.dart';
 
 class Registration extends StatefulWidget {
   @override
@@ -39,8 +42,8 @@ class _RegistrationState extends State<Registration> {
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomInset: true, // set it to false
-        appBar: AppBar(title: Text("Register")),
-        body: Container(
+        appBar: null,
+        body: SafeArea(
           child: ListView(
             children: <Widget>[
               Container(
@@ -265,7 +268,11 @@ class _RegistrationState extends State<Registration> {
                             child: Center(
                                 child: Text("CREATE ACCOUNT",style: TextStyle(color: Colors.white,fontSize: 16))
                             ),
-                            onPressed: (){},
+                            onPressed: (){
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                                return MyApp();
+                              }));
+                            },
                             padding: EdgeInsets.all(20),
                             color: Colors.transparent,
                           ),
