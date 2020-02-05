@@ -1,4 +1,4 @@
-import 'package:birdies_scop/Screens/Scoreboard/ScoreboardEdit.dart';
+import 'package:birdiescope/Screens/Scoreboard/ScoreboardEdit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:slider_button/slider_button.dart';

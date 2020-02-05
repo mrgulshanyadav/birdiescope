@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:birdies_scop/Screens/UserProfile.dart';
+import 'package:birdiescope/Screens/UserProfile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:image_picker/image_picker.dart';

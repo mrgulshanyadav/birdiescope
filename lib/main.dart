@@ -1,5 +1,5 @@
-import 'package:birdies_scop/Screens/Settings.dart';
-import 'package:birdies_scop/Screens/SettingsTabs/SettingsMyProfile.dart';
+import 'package:birdiescope/Screens/Settings.dart';
+import 'package:birdiescope/Screens/SettingsTabs/SettingsMyProfile.dart';
 import 'package:flutter/material.dart';
 import 'Screens/Scoreboard/ScoreboardEdit.dart';
 import 'Screens/Scoreboard/ScoreboardRule.dart';

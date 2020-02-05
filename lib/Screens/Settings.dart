@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:birdies_scop/Screens/SettingsTabs/SettingsMyProfile.dart';
-import 'package:birdies_scop/Screens/SettingsTabs/SettingsMyTeam.dart';
-import 'package:birdies_scop/Screens/SettingsTabs/SettingsPaymentInfo.dart';
+import 'package:birdiescope/Screens/SettingsTabs/SettingsMyProfile.dart';
+import 'package:birdiescope/Screens/SettingsTabs/SettingsMyTeam.dart';
+import 'package:birdiescope/Screens/SettingsTabs/SettingsPaymentInfo.dart';
 
 class Settings extends StatefulWidget {
   @override
